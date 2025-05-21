@@ -69,10 +69,11 @@ def main():
     # Initialize LLM
     llm = ChatOpenAI(api_key=OPENAI_API_KEY, model="gpt-4o", temperature=0)
 
-    # Create an agent with the tools
+# Create an agent with the tools
     prompt = ChatPromptTemplate.from_messages([
         ("system", "You are a helpful assistant that can use various tools to help with network management tasks."),
-        ("user", "{input}")
+        ("user", "{input}"),
+        ("assistant", "{agent_scratchpad}")
     ])
 
     agent = create_openai_tools_agent(llm, tools, prompt)
