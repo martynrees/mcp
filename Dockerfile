@@ -22,7 +22,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the source code from this directory
 COPY / .
-COPY intent_api_2_3_7_9.json /app/intent_api_2_3_7_9.json
+COPY intent_api_2_3_7_7.json /app/intent_api_2_3_7_7.json
 
 # Expose port for the API
 EXPOSE 8000
