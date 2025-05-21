@@ -21,7 +21,7 @@ COPY mcp_server/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the source code from mcp_server directory
-COPY mcp_server/ .
+COPY / .
 COPY intent_api_2_3_7_9.json /app/intent_api_2_3_7_9.json
 
 # Expose port for the API
