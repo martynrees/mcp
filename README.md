@@ -21,7 +21,7 @@ This project implements a Model Context Protocol (MCP) server that wraps the Cis
 1. Clone the repository and navigate to the project directory:
 
 ```bash
-cd /Users/username/Documents/mcp/mcp_server
+cd /mcp
 ```
 
 2. Install the required dependencies:
