@@ -15,12 +15,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements file
-COPY mcp_server/requirements.txt .
+COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the source code from mcp_server directory
+# Copy the source code from this directory
 COPY / .
 COPY intent_api_2_3_7_9.json /app/intent_api_2_3_7_9.json
 
