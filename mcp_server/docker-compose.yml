@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mcp-server:
+    build:
+      context: ..
+      dockerfile: mcp_server/Dockerfile
+    container_name: mcp-server
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CISCO_API_BASE_URL=${CISCO_API_BASE_URL}
+      - CISCO_API_USERNAME=${CISCO_API_USERNAME}
+      - CISCO_API_PASSWORD=${CISCO_API_PASSWORD}
+      - HOST=0.0.0.0
+      - PORT=8000
+      - SWAGGER_JSON_PATH=/app/intent_api_2_3_7_9.json
+    env_file:
+      - .env
+    restart: unless-stopped
