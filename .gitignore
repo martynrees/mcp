@@ -73,9 +73,6 @@ Thumbs.db
 *.bak
 *.tmp
 
-# dotenv environment variables file
-.env
-*.env
 
 # Secret files
 secrets.json
