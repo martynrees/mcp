@@ -1,10 +1,8 @@
-version: '3.8'
-
 services:
   mcp-server:
     build:
       context: ..
-      dockerfile: mcp_server/Dockerfile
+      dockerfile: Dockerfile
     container_name: mcp-server
     ports:
       - "8000:8000"
