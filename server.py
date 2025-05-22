@@ -51,10 +51,16 @@ async def setup_tools():
     global api_tools, langchain_tools, llm, tool_handler, custom_tools
 
     # Parse Swagger file to extract API tools
-    parser = SwaggerParser(config.SWAGGER_JSON_PATH)
-    api_tools = parser.extract_api_tools()
-
-    logger.info(f"Extracted {len(api_tools)} API tools from Swagger file")
+    logger.info(f"Loading Swagger file from: {config.SWAGGER_JSON_PATH}")
+    try:
+        parser = SwaggerParser(config.SWAGGER_JSON_PATH)
+        api_tools = parser.extract_api_tools()
+        logger.info(f"Extracted {len(api_tools)} API tools from Swagger file")
+        if len(api_tools) == 0:
+            logger.warning("No API tools were extracted from the Swagger file")
+    except Exception as e:
+        logger.error(f"Error extracting API tools: {str(e)}")
+        raise
 
     # Initialize API client
     api_client = ApiClient(

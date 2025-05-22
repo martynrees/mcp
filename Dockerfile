@@ -21,7 +21,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the source code from this directory
-COPY / .
+COPY . .
 COPY cisco_dna_center_api_endpoints.json /app/cisco_dna_center_api_endpoints.json
 
 # Expose port for the API
