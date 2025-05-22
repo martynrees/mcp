@@ -17,4 +17,4 @@ HOST = os.getenv("HOST", "0.0.0.0")
 PORT = int(os.getenv("PORT", "8000"))
 
 # Path to the Swagger JSON file
-SWAGGER_JSON_PATH = os.getenv("SWAGGER_JSON_PATH", "../intent_api_2_3_7_9.json")
+SWAGGER_JSON_PATH = os.getenv("SWAGGER_JSON_PATH", "./cisco_dna_center_api_endpoints.json")
