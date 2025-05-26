@@ -1,78 +1,46 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
-
-# Virtual environment
+*.class
+*.so
+.Python
 env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+
+# Docker
+.docker/
+
+# Virtual Environment
 venv/
 ENV/
-env.bak/
-venv.bak/
-.venv/
 
-# Pipenv
-Pipfile.lock
-
-# Poetry
-poetry.lock
-
-# test coverage
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-.hypothesis/
-.pytest_cache/
-htmlcov/
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype
-.pytype/
-
-# PyCharm
+# IDE files
 .idea/
-
-# VS Code
 .vscode/
+*.swp
+*.swo
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Environment variables
+.env.local
+.env.development
+.env.test
+.env.production
 
-# Rope project settings
-.ropeproject
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
-
-# PyInstaller
-*.spec
-dist/
-build/
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-
-# Log files and local settings
+# Logs
 *.log
-*.pot
-*.mo
-*.bak
-*.tmp
 
-
-# Secret files
-secrets.json
+.DS_Store
